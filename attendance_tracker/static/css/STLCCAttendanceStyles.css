@@ -1,0 +1,593 @@
+@charset "utf-8";
+
+/* Stylesheet for Attendance Tracking
+   
+   Author:   Team Venture
+   Code by: AJ Prescott
+   Date:     9/14/2023
+   
+   Filename: STLCCAttendanceStyles.css
+
+*/
+
+/*Font Styles*/
+h1 {
+    font-size: 3em;
+    color: rgb(255,255,255);
+    font-family: "arial", sans-serif;
+    text-align: center;
+    border: 2px double rgb(0,0,0);
+    background-color: rgb(0,130,202);
+    border-radius: 20px;
+}
+body {
+    background-color: rgb(214,224,228);
+}
+
+/*Navigation Styles*/
+nav#navigationButtons {
+    display: block;
+    width: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+nav#navigationButtons table#navTable {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+td#b1 {
+    position: absolute;
+    float: left;
+    left: 250px;
+}
+td#b3 {
+    position: absolute;
+    float: right;
+    right: 250px;
+}
+}
+@media only screen and (max-width: 799px) {
+nav#navigationButtons table#navTable {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+}
+nav#navigationButtons td.notPage button {
+    color: rgb(255,255,255);
+    text-decoration: none;
+    background-color: rgb(213,121,0);
+    font-weight: bold;
+    border-radius: 10px;
+    border-spacing: 70px 0px;
+    font-size: 30px;
+    justify-content: center;
+    margin-bottom: 15px;
+    border: none;
+}
+nav#navigationButtons td.notPage button:hover {
+    color: rgb(255,255,255);
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgb(162,92,0);
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: none;
+}
+nav#navigationButtons td.notPage button:active {
+    color: rgb(250,250,250);
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgb(170,100,8);
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: none;
+}
+nav#navigationButtons td.currentPage button, nav#navigationButtons td.currentPage button:hover,
+nav#navigationButtons td.currentPage button:active {
+    color: rgb(0,36,83);
+    font-size: 30px;
+    background-color: rgb(213,121,0);
+    text-decoration: underline;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: none;
+}
+
+/*Home Paragraph Styles*/
+p#homePara {
+    border: 10px ridge lightblue;
+    font-size: 28px;
+    background-color: rgb(230,230,230);
+    text-align: center;
+    margin: 25px;
+}
+button#attendanceButton {
+    color: rgb(255,255,255);
+    text-decoration: none;
+    background-color: rgb(213,121,0);
+    font-weight: bold;
+    border-radius: 10px;
+    border-spacing: 70px 0px;
+    font-size: 25px;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-left:30px;
+    border: none;
+}
+button:hover#attendanceButton {
+    color: rgb(255,255,255);
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgb(162,92,0);
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-left:30px;
+    border: none;
+}
+button:active#attendanceButton {
+    color: rgb(250,250,250);
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgb(170,100,8);
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-left:30px;
+    border: none;
+}
+
+button#courseButton {
+    color: rgb(255,255,255);
+    text-decoration: none;
+    background-color: rgb(213,121,0);
+    font-weight: bold;
+    border-radius: 10px;
+    border-spacing: 70px 0px;
+    font-size: 25px;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-left:30px;
+    border: none;
+}
+button:hover#courseButton {
+    color: rgb(255,255,255);
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgb(162,92,0);
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-left:30px;
+    border: none;
+}
+button:active#courseButton {
+    color: rgb(250,250,250);
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgb(170,100,8);
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-left:30px;
+    border: none;
+}
+
+/*Login Styles*/
+table#UserLogin {
+    margin: 30px 30px 0px 30px;
+    color: rgb(0,36,83);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+table#UserLogin td input#UserEmail {
+    height: 30px;
+    font-size: 25px;
+    color: rgb(6,50,100);
+}
+
+table#UserLogin td input#UserPassword {
+    height: 30px;
+    font-size: 25px;
+    color: rgb(6,50,100);
+}
+
+input#UserClearButton {
+    margin-left: 30px;
+    border-color: rgb(120,160,190);
+    color: rgb(180,220,245);
+    background-color: rgb(0,36,83);
+    font-size: 24px;
+}
+
+input#UserClearButton:hover {
+    margin-left: 30px;
+    border-color: rgb(120,160,190);
+    color: rgb(100,200,255);
+    background-color: rgb(0,36,83);
+    font-size: 24px;
+}
+
+input#UserClearButton:active {
+    margin-left: 30px;
+    border-color: rgb(120,160,190);
+    color: rgb(0,36,83);
+    background-color: rgb(80,140,220);
+    font-size: 24px;
+}
+
+input#UserSubmitButton {
+    color: rgb(180,220,245);
+    border-color: rgb(120,160,190);
+    background-color: rgb(0,36,83);
+    font-size: 24px;
+}
+
+input#UserSubmitButton:hover {
+    border-color: rgb(120,160,190);
+    color: rgb(100,200,255);
+    background-color: rgb(0,36,83);
+    font-size: 24px;
+}
+
+input#UserSubmitButton:active {
+    border-color: rgb(120,160,190);
+    color: rgb(0,36,83);
+    background-color: rgb(80,140,220);
+    font-size: 24px;
+}
+
+/* Student */
+input#StudentSubmitButton:active {
+    margin-left: 30px;
+    border-color: rgb(120,160,190);
+    color: rgb(0,36,83);
+    background-color: rgb(80,140,220);
+    font-size: 24px;
+}
+
+input#StudentSubmitButton:hover {
+    margin-left: 30px;
+    border-color: rgb(120,160,190);
+    color: rgb(100,200,255);
+    background-color: rgb(0,36,83);
+    font-size: 24px;
+}
+
+input#StudentSubmitButton {
+    margin-left: 30px;
+    color: rgb(180,220,245);
+    border-color: rgb(120,160,190);
+    background-color: rgb(0,36,83);
+    font-size: 24px;
+}
+
+input#AccessCode {
+    margin-left: 30px;
+    height: 30px;
+    font-size: 25px;
+    color: rgb(6,50,100);
+}
+
+p#studentAccessCode {
+    margin: 30px 30px 0px 30px;
+    color: rgb(0,36,83);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+div#StudentError {
+    margin-left: 30px;
+    color: crimson;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+div#StudentSuccess {
+    margin-left: 30px;
+    color: green;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* Instructor */
+input#InstructorSubmitButton:active {
+    margin-left: 30px;
+    border-color: rgb(120,160,190);
+    color: rgb(0,36,83);
+    background-color: rgb(80,140,220);
+    font-size: 24px;
+}
+
+input#InstructorSubmitButton:hover {
+    margin-left: 30px;
+    border-color: rgb(120,160,190);
+    color: rgb(100,200,255);
+    background-color: rgb(0,36,83);
+    font-size: 24px;
+}
+
+input#InstructorSubmitButton {
+    margin-left: 30px;
+    color: rgb(180,220,245);
+    border-color: rgb(120,160,190);
+    background-color: rgb(0,36,83);
+    font-size: 24px;
+}
+
+input#courseDropdown {
+    margin-left: 30px;
+    height: 30px;
+    font-size: 25px;
+    color: rgb(6,50,100);
+}
+
+input#courseDropdown datalist#Courses {
+    margin-left: 30px;
+    height: 30px;
+    font-size: 25px;
+    color: rgb(6,50,100);
+}
+
+p#instructorCourseSelect {
+    margin: 30px 30px 0px 30px;
+    color: rgb(0,36,83);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+div#InstructorError {
+    margin-left: 30px;
+    color: crimson;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+div#InstructorSuccess {
+    margin-left: 30px;
+    color: green;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/*Add Edit Students in Course*/
+input#editCourse {
+    color: rgb(180,220,245);
+    border-color: rgb(120,160,190);
+    background-color: rgb(0,36,83);
+    font-size: 24px;
+}
+
+input#editCourse:hover {
+    border-color: rgb(120,160,190);
+    color: rgb(100,200,255);
+    background-color: rgb(0,36,83);
+    font-size: 24px;
+}
+
+input#editCourse:active {
+    border-color: rgb(120,160,190);
+    color: rgb(0,36,83);
+    background-color: rgb(80,140,220);
+    font-size: 24px;
+}
+
+input#addStudent {
+    margin-left: 30px;
+    color: rgb(180,220,245);
+    border-color: rgb(120,160,190);
+    background-color: rgb(0,36,83);
+    font-size: 24px;
+}
+
+input#addStudent:hover {
+    margin-left: 30px;
+    border-color: rgb(120,160,190);
+    color: rgb(100,200,255);
+    background-color: rgb(0,36,83);
+    font-size: 24px;
+}
+
+input#addStudent:active {
+    margin-left: 30px;
+    border-color: rgb(120,160,190);
+    color: rgb(0,36,83);
+    background-color: rgb(80,140,220);
+    font-size: 24px;
+}
+
+input#removeStudent {
+    color: rgb(180,220,245);
+    border-color: rgb(120,160,190);
+    background-color: rgb(0,36,83);
+    font-size: 24px;
+}
+
+input#removeStudent:hover {
+    border-color: rgb(120,160,190);
+    color: rgb(100,200,255);
+    background-color: rgb(0,36,83);
+    font-size: 24px;
+}
+
+input#removeStudent:active {
+    border-color: rgb(120,160,190);
+    color: rgb(0,36,83);
+    background-color: rgb(80,140,220);
+    font-size: 24px;
+}
+
+input#editStudent {
+    color: rgb(180,220,245);
+    border-color: rgb(120,160,190);
+    background-color: rgb(0,36,83);
+    font-size: 24px;
+}
+
+input#editStudent:hover {
+    border-color: rgb(120,160,190);
+    color: rgb(100,200,255);
+    background-color: rgb(0,36,83);
+    font-size: 24px;
+}
+
+input#editStudent:active {
+    border-color: rgb(120,160,190);
+    color: rgb(0,36,83);
+    background-color: rgb(80,140,220);
+    font-size: 24px;
+}
+
+div#studentAdd, div#studentRemove, div#studentEdit {
+    margin-left: 30px;
+    color: green;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+p#editPara {
+    border: 10px ridge lightblue;
+    font-size: 29px;
+    background-color: rgb(230,230,230);
+    text-align: left;
+    margin: 25px;
+}
+
+/*Show Password Styles*/
+p input#ShowPassword {
+    width: 18px;
+    height: 18px;
+    margin: 0px 4px 0px 30px;
+}
+
+p#ShowPass {
+    font-size: 18px;
+    color: rgb(40,60,102)
+}
+/* Fail/Success Username/Password Styles */
+div#UserError {
+    margin-left: 30px;
+    color: crimson;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+div#UserSuccess {
+    margin-left: 30px;
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+}
+/*Image Styles */
+img#STLCCLogo {
+    background-position: top, left;
+}
+
+div#LogoBackground {
+    background-color: rgb(0,36,83);
+}
+
+/* AddCourse Tabale Styles */
+table#addCourseTable {
+    margin: 30px 30px 0px 30px;
+    color: rgb(0,36,83);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+table#addCourseTable td input#courseCode {
+    height: 30px;
+    font-size: 25px;
+    color: rgb(6,50,100);
+}
+
+table#addCourseTable td input#courseName {
+    height: 30px;
+    font-size: 25px;
+    color: rgb(6,50,100);
+}
+
+table#addCourseTable td input#instructorID {
+    height: 30px;
+    font-size: 25px;
+    color: rgb(6,50,100);
+}
+
+table#addCourseTable td input#startTime {
+    height: 30px;
+    font-size: 25px;
+    color: rgb(6,50,100);
+}
+
+table#addCourseTable td input#endTime {
+    height: 30px;
+    font-size: 25px;
+    color: rgb(6,50,100);
+}
+
+input#CourseClearButton {
+    margin-left: 30px;
+    border-color: rgb(120,160,190);
+    color: rgb(180,220,245);
+    background-color: rgb(0,36,83);
+    font-size: 24px;
+}
+
+input#CourseClearButton:hover {
+    margin-left: 30px;
+    border-color: rgb(120,160,190);
+    color: rgb(100,200,255);
+    background-color: rgb(0,36,83);
+    font-size: 24px;
+}
+
+input#CourseClearButton:active {
+    margin-left: 30px;
+    border-color: rgb(120,160,190);
+    color: rgb(0,36,83);
+    background-color: rgb(80,140,220);
+    font-size: 24px;
+}
+
+input#CourseSubmitButton {
+    color: rgb(180,220,245);
+    border-color: rgb(120,160,190);
+    background-color: rgb(0,36,83);
+    font-size: 24px;
+}
+
+input#CourseSubmitButton:hover {
+    border-color: rgb(120,160,190);
+    color: rgb(100,200,255);
+    background-color: rgb(0,36,83);
+    font-size: 24px;
+}
+
+input#CourseSubmitButton:active {
+    border-color: rgb(120,160,190);
+    color: rgb(0,36,83);
+    background-color: rgb(80,140,220);
+    font-size: 24px;
+}
+
+div#CourseError {
+    margin-left: 30px;
+    color: crimson;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+div#CourseSuccess {
+    margin-left: 30px;
+    color: green;
+    font-weight: bold;
+    font-size: 30px;
+}

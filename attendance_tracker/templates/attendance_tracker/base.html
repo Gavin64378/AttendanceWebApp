@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--
+        Online Attendance Tracker
+        Author: Team Venture
+		Code by: AJ Prescott
+   
+        Filename: index.html
+   
+        -->
+      
+    <meta charset="utf-8" />
+    <title>Online Attendance Tracker</title>
+    <link rel="stylesheet" href="{% static '../../../../static/css/STLCCAttendanceStyles.css' %}" />
+	<link rel="icon" href="{% static '../../../../static/images/STLCC_Logo.png' %}">
+	<link rel="icon" href="{% static '../../../../static/images/STLCC_favicon.jpg' %}">
+    </head>
+    <body>
+        <div id="LogoBackground">
+        <img src="STLCC_Logo.png" alt="STLCC Logo" id="STLCCLogo"/>
+        </div>
+        <h1>STLCC Online Attendance Tracking</h1>
+        <nav id="navigationButtons">
+            <table BORDER="0" id="navTable">
+                <tr>
+                    <td class="currentPage" id="b1"><a href="{% url 'attendance_tracker:index' %}">Home →</a></td>
+                    <td class="notPage" id="b3"><a href="{% url 'attendance_tracker:login' %}">Login →</a></td>
+                </tr>
+            </table>
+        </nav>
+	<br />
+
+    {% block content %}{% endblock content %}

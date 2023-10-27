@@ -1,0 +1,32 @@
+{% extends 'attendance_tracker/base.html' %}
+
+{% block content %}
+
+<p id="homePara">If you're a student logging in, you will have the ability 
+    to enter a code (provided by the instructor). If you're an instructor, you
+    will be able to choose a course to generate an access code for. <strong>This
+    code must be submitted by students within 5 minutes after class begins.</strong><br /><br />
+    <em>Please enter your login information.</em></p>
+    <form id="UserLoginForm">
+        <table BORDER="0" id="UserLogin">
+            <tr>
+                <td>School Email:</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="UserEmail" size="21"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+            </tr>
+            <tr>
+                <td><input type="password" id="UserPassword" size="21"></td>
+            </tr>
+        </table>
+    </form>
+    <p id="ShowPass"><input type="checkbox" id="ShowPassword">Show Password</p>
+    <div id="UserError"></div>
+    <input type="button" id="UserClearButton" value="Clear">
+    <input type="button" id="UserSubmitButton" value="Login">
+</body>
+
+{% endblock content %}
